@@ -23,3 +23,4 @@ Bu dosyadaki kod satırları önceden yapılandırılmış varsayılanlarla bir 
 2. Veri Modelinin İskelesinin Eklenmesi (Scaffold):
    - Projedeki Pages klasörü altına Movies adında yeni klasör ekledim. Bu Movies klasörüne sağ tıklayıp Add -> New Scaffold Item -> Razor Pages using Entity Framework (CRUD) seçiyoruz.
    - Açılan pencerede Model class olarak Movie sınıfını seçiyoruz, DbContext class için + ya basarak RazorPagesMovie.Data.RazorPagesMovieContext oluşturduk ve add tıkladık.
+   - Bu işlem sonrasında Pages/Movies dizininde Create, Delete, Details, Edit, Index isimli razor page dosyaları ve Data/RazorPagesMovieContext.cs dosyaları otomatik olarak oluşturuldu.
