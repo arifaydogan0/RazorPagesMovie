@@ -15,4 +15,11 @@ HTML dosyaları, JavaScript dosyaları ve CSS dosyaları gibi statik varlıklar 
 ### appsettings.json
 Bağlantı dizeleri gibi yapılandırma verilerini içerir.
 ### Program.cs
-Bu dosyadaki aşağıdaki kod satırları önceden yapılandırılmış varsayılanlarla bir WebApplicationBuilder oluşturur, DI konteynerına Razor Pages desteğini ekler ve uygulamayı derler.
+Bu dosyadaki kod satırları önceden yapılandırılmış varsayılanlarla bir WebApplicationBuilder oluşturur, DI konteynerına Razor Pages desteğini ekler ve uygulamayı derler. Servis ekleme ve routing ile ilgili tüm işlemleri ve yapılandırmaları burada yaparız.
+
+## Geliştirme Süreci
+1. Veri Modeli Eklenmesi: 
+   - Proje içerisine Models adında bir klasör ekledim, bu klasör modelleri tutacak. Models klasörüme Movie adında sınıf ekliyorum ve özelliklerini tanımlıyorum.
+2. Veri Modelinin İskelesinin Eklenmesi (Scaffold):
+   - Projedeki Pages klasörü altına Movies adında yeni klasör ekledim. Bu Movies klasörüne sağ tıklayıp Add -> New Scaffold Item -> Razor Pages using Entity Framework (CRUD) seçiyoruz.
+   - Açılan pencerede Model class olarak Movie sınıfını seçiyoruz, DbContext class için + ya basarak RazorPagesMovie.Data.RazorPagesMovieContext oluşturduk ve add tıkladık.
