@@ -1,7 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages(); //Razor Pages desteði eklendi.
 
 var app = builder.Build();
 
@@ -13,13 +13,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseHttpsRedirection();  //HTTP isteklerini HTTPS'ye yönlendirir.
 
-app.UseRouting();
+app.UseStaticFiles();   //HTML, CSS, görüntüler ve JavaScript gibi statik dosyalarýn kullanýmýna olanak tanýr.
 
-app.UseAuthorization();
+app.UseRouting();  //Middleware iþlem hattýna yol eþleþtirmesi yapar.
 
-app.MapRazorPages();
+app.UseAuthorization(); //Kullanýcýyý güvenli kaynaklara eriþmesi için yetkiler. Bu uygulama yetkilendirme kullanmýyor, bu nedenle bu satýr kaldýrýlabilir.
+
+app.MapRazorPages();  //Sayfalar için Razor endpoint yönlendirmesini yapýlandýrýyor.
 
 app.Run();
