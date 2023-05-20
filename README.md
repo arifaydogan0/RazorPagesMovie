@@ -23,4 +23,6 @@ Bu dosyadaki kod satırları önceden yapılandırılmış varsayılanlarla bir 
 2. Veri Modelinin İskelesinin Eklenmesi (Scaffold):
    - Projedeki Pages klasörü altına Movies adında yeni klasör ekledim. Bu Movies klasörüne sağ tıklayıp Add -> New Scaffold Item -> Razor Pages using Entity Framework (CRUD) seçiyoruz.
    - Açılan pencerede Model class olarak Movie sınıfını seçiyoruz, DbContext class için + ya basarak RazorPagesMovie.Data.RazorPagesMovieContext oluşturduk ve add tıkladık.
-   - Bu işlem sonrasında Pages/Movies dizininde Create, Delete, Details, Edit, Index isimli razor page dosyaları ve Data/RazorPagesMovieContext.cs dosyaları otomatik olarak oluşturuldu.
+   - Bu işlem sonrasında Pages/Movies dizininde Create, Delete, Details, Edit, Index isimli razor page dosyaları ve Data/RazorPagesMovieContext.cs dosyaları otomatik olarak oluşturuldu ve Program.cs e ekstra bir kaç satır kod eklendi.
+3. EF'nin migration özeliğini kullanarak ilk db şemasını oluşturma
+   - Tools -> Nuget Package Manager -> Package Manager Consoler seçiyoruz ve PMC'de `Add-Migration InitialCreate` ve ardından `Update-Database` komutlarını giriyoruz. (Burada Add-Migration komutu ilk veritabanı şemasını oluşturmak için kod üretir. Şema, DbContext'te belirtilen modeli temel alır. InitialCreate bağımsız değişkeni, migrationu adlandırmak için kullanılır. Herhangi bir ad kullanılabilir, ancak kural gereği migrationu açıklayan bir ad seçilir.)
