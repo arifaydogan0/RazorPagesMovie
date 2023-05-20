@@ -6,4 +6,4 @@ Razor Pages, Asp.NET Core ile server tabanlı UI web uygulaması geliştirmenin 
 Razor Pagesi ve destekleyici dosyaları içerir. Her razor page, bir dosya çiftidir(.cshtml, .cshtml.cs).
 - `.cshtml` => Razor sözdizimini kullanan, C# koduyla HTML işaretlemisini içeren dosya.
 - `.cshtml.cs` => Sayfa olaylarını işleyen C# koduna sahip dosya.
-- `_Layout.cshtml` =>
+- `_Layout.cshtml` => Tüm sayfalarda ortaktır. Sayfanın üst kısmındaki gezinti menüsünü ve sayfanın en altındaki telif hakkı bildirimini ayarlar. Destekleyici dosyaların alt çizgiyle başlayan adları vardır.
