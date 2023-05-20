@@ -9,7 +9,7 @@ Yeni bir Asp.NET Core Web App projesi başlatınca karşımıza şuna benzer bir
 Razor Pagesi ve destekleyici dosyaları içerir. Her razor page, bir dosya çiftidir(.cshtml, .cshtml.cs).
 - `.cshtml` => Razor sözdizimini kullanan, C# koduyla HTML işaretlemisini içeren dosya.
 - `.cshtml.cs` => Sayfa olaylarını işleyen C# koduna sahip dosya.
-- `_Layout.cshtml` => Tüm sayfalarda ortaktır. Sayfanın üst kısmındaki gezinti menüsünü ve sayfanın en altındaki telif hakkı bildirimini ayarlar. Destekleyici dosyaların alt çizgiyle başlayan adları vardır.
+- `_Layout.cshtml` => Tüm sayfalarda ortaktır ve proje içinde çoğu yerde ortaklaşa kullanılacak bir şablon oluşturmak için kullanılır. Burada sayfanın üst kısmındaki gezinti menüsünü ve sayfanın en altındaki telif hakkı bildirimini ayarlar. Destekleyici dosyaların alt çizgiyle başlayan adları vardır.
 ### wwwroot klasörü
 HTML dosyaları, JavaScript dosyaları ve CSS dosyaları gibi statik varlıklar içerir.
 ### appsettings.json
