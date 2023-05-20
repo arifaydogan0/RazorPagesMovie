@@ -15,3 +15,4 @@ HTML dosyaları, JavaScript dosyaları ve CSS dosyaları gibi statik varlıklar 
 ### appsettings.json
 Bağlantı dizeleri gibi yapılandırma verilerini içerir.
 ### Program.cs
+Bu dosyadaki aşağıdaki kod satırları önceden yapılandırılmış varsayılanlarla bir WebApplicationBuilder oluşturur, DI konteynerına Razor Pages desteğini ekler ve uygulamayı derler.
