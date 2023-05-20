@@ -1,7 +1,12 @@
+ï»¿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RazorPagesMovie.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages(); //Razor Pages desteði eklendi.
+builder.Services.AddRazorPages(); //Razor Pages desteï¿½i eklendi.
+builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
 
 var app = builder.Build();
 
@@ -13,14 +18,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();  //HTTP isteklerini HTTPS'ye yönlendirir.
+app.UseHttpsRedirection();  //HTTP isteklerini HTTPS'ye yï¿½nlendirir.
 
-app.UseStaticFiles();   //HTML, CSS, görüntüler ve JavaScript gibi statik dosyalarýn kullanýmýna olanak tanýr.
+app.UseStaticFiles();   //HTML, CSS, gï¿½rï¿½ntï¿½ler ve JavaScript gibi statik dosyalarï¿½n kullanï¿½mï¿½na olanak tanï¿½r.
 
-app.UseRouting();  //Middleware iþlem hattýna yol eþleþtirmesi yapar.
+app.UseRouting();  //Middleware iï¿½lem hattï¿½na yol eï¿½leï¿½tirmesi yapar.
 
-app.UseAuthorization(); //Kullanýcýyý güvenli kaynaklara eriþmesi için yetkiler. Bu uygulama yetkilendirme kullanmýyor, bu nedenle bu satýr kaldýrýlabilir.
+app.UseAuthorization(); //Kullanï¿½cï¿½yï¿½ gï¿½venli kaynaklara eriï¿½mesi iï¿½in yetkiler. Bu uygulama yetkilendirme kullanmï¿½yor, bu nedenle bu satï¿½r kaldï¿½rï¿½labilir.
 
-app.MapRazorPages();  //Sayfalar için Razor endpoint yönlendirmesini yapýlandýrýyor.
+app.MapRazorPages();  //Sayfalar iï¿½in Razor endpoint yï¿½nlendirmesini yapï¿½landï¿½rï¿½yor.
 
 app.Run();
