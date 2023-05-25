@@ -1,4 +1,6 @@
-[Bu Sayfada Referans Alınan Projenin Orijinali](https://learn.microsoft.com/tr-tr/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-7.0&tabs=visual-studio)
+Bu Sayfada Referans Alınan Projenin;  
+[Orijinali](https://learn.microsoft.com/tr-tr/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-7.0&tabs=visual-studio)  
+[Türçesi](https://github.com/arifaydogan0/XXX/tree/master/Asp.Net%20Core%20Razor%20Pages)
 # Asp.NET Core Razor Pages
 Razor Pages, Asp.NET Core ile server tabanlı UI web uygulaması geliştirme çerçevesidir. Burada bir uygulama geliştirilerek proje dosyaları incelenecektir.  
 Yeni bir Asp.NET Core Web App projesi başlatınca karşımıza şuna benzer bir proje geliyor.  
