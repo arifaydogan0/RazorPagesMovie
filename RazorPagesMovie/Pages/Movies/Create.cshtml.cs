@@ -24,6 +24,9 @@ namespace RazorPagesMovie.Pages.Movies
             return Page();
         }
 
+
+        // Movie özelliği, model bağlamayı etkinleştirmek için [BindProperty] özniteliğini kullanır.
+        // Create formu, form değerlerini gönderdiğinde, ASP.NET Core çalışma zamanı, gönderilen değerleri Movie modeline bağlar.
         [BindProperty]
         public Movie Movie { get; set; } = default!;
 

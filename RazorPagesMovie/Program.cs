@@ -1,21 +1,30 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using RazorPagesMovie.Data;
+using RazorPagesMovie.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorPages(); //Razor Pages deste�i eklendi.
+/* Add services to the container. */
+//Razor Pages desteği eklendi.
+builder.Services.AddRazorPages();
+//Veritabanı contexti, Dependency Injection kapsayıcısına kaydedildi.
 builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new Exception("Connection string 'RazorPagesMovieContext' not found.")));
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    SeedData.Initialize(services);
+}
+
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error"); 
+    app.UseExceptionHandler("/Error");
     app.UseHsts();   // Varsayılan HSTS değeri 30 gündür. Bunu production senaryoları için değiştirmek isteyebilirsiniz, bkz. https://aka.ms/aspnetcore-hsts
 }
 
