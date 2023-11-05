@@ -34,7 +34,7 @@ app.UseStaticFiles();   //HTML, CSS, görüntüler ve JavaScript gibi statik dos
 
 app.UseRouting();  //Middleware işlem hattına yol eşleştirmesi yapar.
 
-app.UseAuthorization(); //Kullanıcıya g�venli kaynaklara eri�mesi i�in yetkiler. Bu uygulama yetkilendirme kullanm�yor, bu nedenle bu sat�r kald�r�labilir.
+app.UseAuthorization(); //Kullanıcıya güvenli kaynaklara erişmesi için yetkiler. Bu uygulama yetkilendirme kullanm�yor, bu nedenle bu sat�r kald�r�labilir.
 
 app.MapRazorPages();  //Sayfalar için Razor endpoint yönlendirmesini yapılandırıyor.
 
